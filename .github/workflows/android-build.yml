@@ -30,14 +30,9 @@ jobs:
         run: flutter pub get
         
       - name: Build APK
-        # Added the skip flag to bypass the Gradle version error
         run: flutter build apk --split-per-abi --android-skip-build-dependency-validation
         
       - name: Upload APK Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: release-apk
-          path: build/app/outputs/flutter-apk/*.apk
         uses: actions/upload-artifact@v4
         with:
           name: release-apk
