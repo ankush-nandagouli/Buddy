@@ -13,7 +13,7 @@ jobs:
       # 1. This step unzips your file in the cloud before building
       - name: Unzip project files
         run: |
-          unzip project.zip
+          unzip deskbuddy.zip
           ls -la # Lists files to verify they are extracted
 
       - name: Set up Java
